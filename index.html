@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Jane Austen's World</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="intro">
+          <h1>Jane Austen's World</h1>
+
+          <p>
+            It's a truth universally acknowledged that in order to experience
+            high tea and romantic delusions one must have the proper name.
+          </p>
+
+          <p>
+            Complete the quiz below to determine what your Jane Austen character
+            name would be!
+          </p>
+
+          <div class="submitContainer">
+            <input type="submit" value="Find out your name!" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <form action="">
+          <!-- Question 1 -->
+          <fieldset class="question1">
+            <h2>
+              What is your favourite Jane Austen novel?
+            </h2>
+            <!-- Option 1 -->
+            <input
+              type="radio"
+              name="novel"
+              id="prideAndPrejudice"
+              value="prideAndPrejudice"
+            />
+            <label for="prideAndPrejudice">Pride and Prejudice</label>
+            <!-- Option 2 -->
+            <input type="radio" name="novel" id="emma" value="emma" />
+            <label for="emma">Emma</label>
+            <!-- Option 3 -->
+            <input
+              type="radio"
+              name="novel"
+              id="senseAndSensibility"
+              value="senseAndSensibility"
+            />
+            <label for="senseAndSensibility">Sense and Sensibility</label>
+          </fieldset>
+
+          <!-- Question 2  -->
+          <fieldset class="question2">
+            <h2>
+              Tea or Old English?
+            </h2>
+            <!-- Option 1 -->
+            <input type="radio" name="lastname" id="tea" value="tea" />
+            <label for="tea">Tea</label>
+            <!-- Option 2 -->
+            <input
+              type="radio"
+              name="lastname"
+              id="oldEnglish"
+              value="oldEnglish"
+            />
+            <label for="oldEnglish">Old English</label>
+
+            <div class="submitContainer">
+              <input type="submit" value="Find out your name!" />
+            </div>
+          </fieldset>
+        </form>
+        <h3 class="results"></h3>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrapper">Copyright Sierra MacDonald - Created at Juno</div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- Background pattern from Toptal Subtle Patterns  -->
