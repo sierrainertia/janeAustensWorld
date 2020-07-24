@@ -9,6 +9,13 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="styles/assets/lady.png" />
+
     <title>Jane Austen's World</title>
   </head>
   <body>
@@ -47,7 +54,7 @@
           <div class="image">
             <img
               src="styles/assets/lady.png"
-              alt="The sillouette of a victorian style lady"
+              alt="A black sillouette of a victorian style lady"
             />
           </div>
         </section>
@@ -66,6 +73,7 @@
 
               <div class="option">
                 <input
+                  class="visuallyHidden"
                   type="radio"
                   name="novel"
                   id="prideAndPrejudice"
@@ -77,6 +85,7 @@
               <!-- Option 2 -->
               <div class="option">
                 <input
+                  class="visuallyHidden"
                   type="radio"
                   name="novel"
                   id="emma"
@@ -88,6 +97,7 @@
               <!-- Option 3 -->
               <div class="option">
                 <input
+                  class="visuallyHidden"
                   type="radio"
                   name="novel"
                   id="senseAndSensibility"
@@ -100,28 +110,43 @@
           </div>
           <div class="q2">
             <!-- Question 2  -->
+            <div class="image2">
+              <img
+                src="styles/assets/tea.png"
+                alt="A black sillouette of a tea bag"
+              />
+            </div>
             <fieldset class="question2">
               <h2>
                 Tea or Old English?
               </h2>
               <!-- Option 1 -->
-              <input
-                type="radio"
-                name="lastname"
-                id="tea"
-                value="tea"
-                required
-              />
-              <label for="tea">Tea</label>
+              <div class="option">
+                <input
+                  class="visuallyHidden"
+                  type="radio"
+                  name="lastname"
+                  id="tea"
+                  value="tea"
+                  required
+                />
+                <label for="tea">Tea</label>
+              </div>
               <!-- Option 2 -->
-              <input
-                type="radio"
-                name="lastname"
-                id="oldEnglish"
-                value="oldEnglish"
-                required
-              />
-              <label for="oldEnglish">Old English</label>
+              <div class="option">
+                <input
+                  class="visuallyHidden"
+                  type="radio"
+                  name="lastname"
+                  id="oldEnglish"
+                  value="oldEnglish"
+                  required
+                />
+                <label for="oldEnglish">Old English</label>
+              </div>
+              <div class="submitContainer">
+                <input type="submit" value="Find out your name!" />
+              </div>
             </fieldset>
           </div>
           <!-- <fieldset class="question3">
@@ -139,13 +164,13 @@
                 <option value="Duchess">Duchess</option>
                 <option value="Normal Human">Normal human</option>
               </select>
-            </p>
-            <div class="submitContainer">
-              <input type="submit" value="Find out your name!" />
-            </div>
-          </fieldset> -->
+            </p> -->
+
+          <!-- </fieldset> -->
         </form>
-        <h3 class="results"></h3>
+        <div class="result">
+          <h3 class="results"></h3>
+        </div>
       </div>
     </main>
 

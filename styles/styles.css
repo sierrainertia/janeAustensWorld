@@ -324,7 +324,7 @@ textarea {
   box-sizing: border-box;
 }
 
-.visuallyHidden:not(:focus):not(:active) {
+.visuallyHidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -363,17 +363,22 @@ img {
 h1,
 h2,
 h3 {
-  font-family: "Petit Formal Script", cursive;
+  font-family: "Cookie", cursive;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 55px;
+}
+
+h3 {
+  letter-spacing: 4px;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 85px;
   text-align: left;
   padding: 50px;
+  line-height: 1;
 }
 
 header {
@@ -389,7 +394,7 @@ header .wrapper {
 }
 
 .info {
-  padding: 20px 20px 50px 50px;
+  padding: 0 20px 50px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,24 +420,67 @@ header p {
 
 main {
   margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 main h2 {
   padding: 50px;
+  text-align: center;
 }
 
-main .q1 {
+main .q1,
+main .q2 {
   background-color: rgba(211, 211, 211, 0.7);
-  padding: 50px;
+  padding: 0 50px 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .q2 {
+  margin-top: 50px;
+}
+
+main .q2 .option {
+  text-align: center;
 }
 
 main .option {
   padding: 20px 0 0 50px;
+  display: inline;
+}
+
+main .option input:checked + label {
+  background-color: #d3c0cd;
+  color: #333333;
+  border: 2px solid #333333;
+}
+
+main .option label {
+  background-color: #333333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+main .q2 {
+  position: relative;
+}
+
+main .image2 {
+  position: absolute;
+  left: 60px;
+  bottom: 45px;
+}
+
+main .result {
+  margin-top: 50px;
+  background-color: rgba(211, 192, 205, 0.7);
+}
+
+main .result h3 {
+  font-size: 100px;
+  text-align: center;
 }

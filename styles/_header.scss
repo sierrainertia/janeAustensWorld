@@ -1,7 +1,8 @@
 h1 {
-  font-size: 60px;
+  font-size: 85px;
   text-align: left;
   padding: 50px;
+  line-height: 1;
 }
 
 header {
@@ -10,18 +11,13 @@ header {
     background-color: $purple;
   }
 }
-// .intro {
-//   display: flex;
-//   flex-direction: column;
-//   position: relative;
-// }
 
 .intro {
   position: relative;
 }
 
 .info {
-  padding: $textPadding;
+  padding: 0 20px 50px 50px;
   display: flex;
   width: 80%;
 }

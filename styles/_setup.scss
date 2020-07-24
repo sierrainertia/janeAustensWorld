@@ -288,7 +288,8 @@ textarea {
   box-sizing: border-box;
 }
 
-.visuallyHidden:not(:focus):not(:active) {
+// Removed not focus not active to support removal of radio button
+.visuallyHidden {
   position: absolute;
   width: 1px;
   height: 1px;

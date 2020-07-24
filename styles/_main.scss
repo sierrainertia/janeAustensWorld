@@ -1,18 +1,62 @@
 main {
   margin-top: 50px;
-  display: flex;
-  flex-direction: column;
 
   h2 {
     padding: 50px;
+    text-align: center;
   }
 
-  .q1 {
-    background-color: $lightGrey;
-    padding: 50px;
+  .q1,
+  .q2 {
+    @include questionBox;
+    display: flex;
+    justify-content: center;
+  }
+
+  .q2 {
+    margin-top: 50px;
+
+    .option {
+      text-align: center;
+    }
   }
 
   .option {
     padding: 20px 0 0 50px;
+    display: inline;
+
+    input:checked + label {
+      background-color: #d3c0cd;
+      color: $darkGrey;
+      border: 2px solid $darkGrey;
+    }
+  }
+
+  .option label {
+    background-color: $darkGrey;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .q2 {
+    position: relative;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 60px;
+    bottom: 45px;
+  }
+
+  //   results box
+  .result {
+    margin-top: 50px;
+    background-color: $purple;
+
+    h3 {
+      font-size: 100px;
+      text-align: center;
+    }
   }
 }
