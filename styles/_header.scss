@@ -1,11 +1,45 @@
 h1 {
-  font-family: "Delius Swash Caps", cursive;
-  font-size: 72px;
-  text-align: center;
+  font-size: 60px;
+  text-align: left;
   padding: 50px;
 }
 
+header {
+  margin-top: 50px;
+  .wrapper {
+    background-color: $purple;
+  }
+}
+// .intro {
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+// }
+
 .intro {
-  padding: 20px 50px 50px 50px;
-  background-color: #d3c0cd;
+  position: relative;
+}
+
+.info {
+  padding: $textPadding;
+  display: flex;
+  width: 80%;
+}
+
+.image {
+  flex-basis: 20%;
+  height: 80%;
+
+  img {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    max-height: 70%;
+  }
+}
+
+header {
+  p {
+    padding-bottom: 40px;
+  }
 }

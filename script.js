@@ -56,9 +56,9 @@ myApp.oldEnglish = [
 ];
 
 myApp.lastNamesByChoice = {
-  tea = myApp.tea,
-  oldEnglish = myApp.oldEnglish,
-}
+  tea: myApp.tea,
+  oldEnglish: myApp.oldEnglish,
+};
 
 myApp.init = function () {
   myApp.eventListener();
@@ -73,6 +73,9 @@ myApp.eventListener = function () {
   $("form").on("submit", function (event) {
     event.preventDefault();
 
+    // collect honorific selected
+    // Const honorificSelectedDD = $(select[id=honorific]).val();
+
     // get which book they selected
     const fnSelectedRadioButton = $("input[name=novel]:checked");
     const book = fnSelectedRadioButton.val();
@@ -84,21 +87,19 @@ myApp.eventListener = function () {
     const chosenFirstName = myApp.getName(firstNameList);
 
     // take users choice of tea or old english
-      const lnSelectedRadioButton = $("input[name=lastname]:checked");
+    const lnSelectedRadioButton = $("input[name=lastname]:checked");
 
-      const teaOrOldEnglish = lnSelectedRadioButton.val();
+    const teaOrOldEnglish = lnSelectedRadioButton.val();
 
-      // Get the list of random words for their choice
-      const lastNameList = myApp.lastNamesByChoice[teaOrOldEnglish];
-    
-        // choose random tea or old english word based on users choice
+    // Get the list of random words for their choice
+    const lastNameList = myApp.lastNamesByChoice[teaOrOldEnglish];
+
+    // choose random tea or old english word based on users choice
     const chosenLastName = myApp.getName(lastNameList);
-    
 
     // return to user random first name + tea/old english word when randomize button is clicked
 
-    $(".results").html(`${chosenFirstName}+ $()`);
-
+    $(".results").html(`${chosenFirstName} ${chosenLastName}`);
   });
 };
 

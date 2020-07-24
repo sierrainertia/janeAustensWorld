@@ -4,12 +4,28 @@ html {
 
 body {
   background-image: url(assets/greyfloral/greyfloral.png);
+  font-family: $bodyFont;
+  font-size: 25px;
+  color: $darkGrey;
+  line-height: 1.5;
+}
 
-  font-family: "Open Sans", sans-serif;
+img {
+  max-width: 100%;
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 900px;
   width: 90%;
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $headerFont;
+}
+
+h2 {
+  font-size: 40px;
 }

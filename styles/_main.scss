@@ -1,2 +1,18 @@
 main {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    padding: 50px;
+  }
+
+  .q1 {
+    background-color: $lightGrey;
+    padding: 50px;
+  }
+
+  .option {
+    padding: 20px 0 0 50px;
+  }
 }

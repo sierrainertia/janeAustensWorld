@@ -344,26 +344,95 @@ html {
 
 body {
   background-image: url(assets/greyfloral/greyfloral.png);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 900px;
   width: 90%;
   margin: 0 auto;
 }
 
-.wrapper {
-  background-color: #d3c0cd;
+h1,
+h2,
+h3 {
+  font-family: "Petit Formal Script", cursive;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 h1 {
-  font-family: "Delius Swash Caps", cursive;
-  font-size: 72px;
-  text-align: center;
+  font-size: 60px;
+  text-align: left;
   padding: 50px;
 }
 
+header {
+  margin-top: 50px;
+}
+
+header .wrapper {
+  background-color: rgba(211, 192, 205, 0.7);
+}
+
 .intro {
-  padding: 20px 50px 50px 50px;
+  position: relative;
+}
+
+.info {
+  padding: 20px 20px 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+
+.image {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  height: 80%;
+}
+
+.image img {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  max-height: 70%;
+}
+
+header p {
+  padding-bottom: 40px;
+}
+
+main {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main h2 {
+  padding: 50px;
+}
+
+main .q1 {
+  background-color: rgba(211, 211, 211, 0.7);
+  padding: 50px;
+}
+
+main .option {
+  padding: 20px 0 0 50px;
 }
