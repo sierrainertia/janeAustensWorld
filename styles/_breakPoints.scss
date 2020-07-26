@@ -1,0 +1,118 @@
+// Tablet size
+@media (max-width: 950px) {
+  body {
+    font-size: 20px;
+  }
+
+  header {
+    .description {
+      max-width: 80%;
+    }
+
+    .info {
+      width: 100%;
+    }
+  }
+
+  main {
+    .optionContainer {
+      flex-direction: column;
+    }
+    .q1,
+    .q2,
+    .q3 {
+      .option {
+        padding: 20px 0 0 0px;
+      }
+    }
+
+    .image2 {
+      left: 40px;
+      bottom: 30px;
+    }
+  }
+}
+
+// mid way view
+@media (max-width: 680px) {
+  header {
+    .info {
+      padding: 20px;
+    }
+    .image img {
+      max-height: 50%;
+    }
+  }
+  main {
+    h1,
+    h2,
+    h3 {
+      line-height: 1;
+      padding: 35px;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      font-size: 45px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+
+    .q1,
+    .q2,
+    .q3 {
+      padding: unset;
+    }
+    .optionContainer {
+      padding-bottom: 50px;
+    }
+
+    .submitContainer {
+      margin-top: 45px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+// smallest view
+@media (max-width: 550px) {
+  header {
+    .image img {
+      display: none;
+    }
+
+    .info {
+      justify-content: center;
+      width: unset;
+    }
+  }
+
+  main {
+    .image img,
+    .image2 img {
+      display: none;
+    }
+
+    .q3 {
+      p {
+        text-align: center;
+      }
+      input {
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+
+    footer {
+      p {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}

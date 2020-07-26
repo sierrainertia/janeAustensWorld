@@ -28,6 +28,12 @@ h3 {
 
 h2 {
   font-size: 55px;
+
+  &:after {
+    content: "";
+    @include fancy;
+    background-position: center;
+  }
 }
 
 h3 {

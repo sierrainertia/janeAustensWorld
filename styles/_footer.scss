@@ -1,0 +1,17 @@
+footer {
+  background-color: $purple;
+  text-align: center;
+
+  p {
+    font-size: 18px;
+  }
+
+  .restartContainer {
+    padding: 20px;
+    @include submit;
+
+    input:hover {
+      background-color: $lightGrey;
+    }
+  }
+}

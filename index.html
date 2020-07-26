@@ -24,17 +24,6 @@
         <section class="intro">
           <h1>Jane Austen's World</h1>
           <div class="info">
-            <!-- Making scooped corners followed code from https://css-tricks.com/scooped-corners-in-2018/ -->
-            <!-- <svg>
-            <mask id="m" fill="#fff">
-              <rect id="r" width="100%" height="100%" />
-              <circle id="c" r="50" fill="#000" />
-              <use xlink:href="#c" x="100%" />
-              <use xlink:href="#c" y="100%" />
-              <use xlink:href="#c" x="100%" y="100%" />
-            </mask>
-            <use xlink:href="#r" fill="#f90" mask="url(#m)" />
-          </svg> -->
             <div class="description">
               <p>
                 It's a truth universally acknowledged that in order to
@@ -47,9 +36,6 @@
                 character name would be!
               </p>
             </div>
-            <!-- <div class="submitContainer">
-            <input type="submit" value="Begin!" />
-          </div> -->
           </div>
           <div class="image">
             <img
@@ -70,46 +56,48 @@
                 What is your favourite Jane Austen novel?
               </h2>
               <!-- Option 1 -->
-
-              <div class="option">
-                <input
-                  class="visuallyHidden"
-                  type="radio"
-                  name="novel"
-                  id="prideAndPrejudice"
-                  value="prideAndPrejudice"
-                  required
-                />
-                <label for="prideAndPrejudice">Pride and Prejudice</label>
-              </div>
-              <!-- Option 2 -->
-              <div class="option">
-                <input
-                  class="visuallyHidden"
-                  type="radio"
-                  name="novel"
-                  id="emma"
-                  value="emma"
-                  required
-                />
-                <label for="emma">Emma</label>
-              </div>
-              <!-- Option 3 -->
-              <div class="option">
-                <input
-                  class="visuallyHidden"
-                  type="radio"
-                  name="novel"
-                  id="senseAndSensibility"
-                  value="senseAndSensibility"
-                  required
-                />
-                <label for="senseAndSensibility">Sense and Sensibility</label>
+              <div class="optionContainer">
+                <div class="option">
+                  <input
+                    class="visuallyHidden"
+                    type="radio"
+                    name="novel"
+                    id="prideAndPrejudice"
+                    value="prideAndPrejudice"
+                    required
+                  />
+                  <label for="prideAndPrejudice">Pride and Prejudice</label>
+                </div>
+                <!-- Option 2 -->
+                <div class="option">
+                  <input
+                    class="visuallyHidden"
+                    type="radio"
+                    name="novel"
+                    id="emma"
+                    value="emma"
+                    required
+                  />
+                  <label for="emma">Emma</label>
+                </div>
+                <!-- Option 3 -->
+                <div class="option">
+                  <input
+                    class="visuallyHidden"
+                    type="radio"
+                    name="novel"
+                    id="senseAndSensibility"
+                    value="senseAndSensibility"
+                    required
+                  />
+                  <label for="senseAndSensibility">Sense and Sensibility</label>
+                </div>
               </div>
             </fieldset>
           </div>
+
+          <!-- Question 2  -->
           <div class="q2">
-            <!-- Question 2  -->
             <div class="image2">
               <img
                 src="styles/assets/tea.png"
@@ -121,52 +109,57 @@
                 Tea or Old English?
               </h2>
               <!-- Option 1 -->
-              <div class="option">
-                <input
-                  class="visuallyHidden"
-                  type="radio"
-                  name="lastname"
-                  id="tea"
-                  value="tea"
-                  required
-                />
-                <label for="tea">Tea</label>
-              </div>
-              <!-- Option 2 -->
-              <div class="option">
-                <input
-                  class="visuallyHidden"
-                  type="radio"
-                  name="lastname"
-                  id="oldEnglish"
-                  value="oldEnglish"
-                  required
-                />
-                <label for="oldEnglish">Old English</label>
-              </div>
-              <div class="submitContainer">
-                <input type="submit" value="Find out your name!" />
+              <div class="optionContainer">
+                <div class="option">
+                  <input
+                    class="visuallyHidden"
+                    type="radio"
+                    name="lastname"
+                    id="tea"
+                    value="tea"
+                    required
+                  />
+                  <label for="tea">Tea</label>
+                </div>
+                <!-- Option 2 -->
+                <div class="option">
+                  <input
+                    class="visuallyHidden"
+                    type="radio"
+                    name="lastname"
+                    id="oldEnglish"
+                    value="oldEnglish"
+                    required
+                  />
+                  <label for="oldEnglish">Old English</label>
+                </div>
               </div>
             </fieldset>
           </div>
-          <!-- <fieldset class="question3">
-            <h2>
-              Honorific?
-            </h2>
-            <p>
-              <label>Pick your honorific:</label>
-              <select id="honorific">
-                <option value="Sir">Sir</option>
-                <option value="Colonel">Colonel</option>
-                <option value="Duke">Duke</option>
-                <option value="Lady">Lady</option>
-                <option value="Madam">Madam</option>
-                <option value="Duchess">Duchess</option>
-                <option value="Normal Human">Normal human</option>
-              </select>
-            </p> -->
 
-          <!-- </fieldset> -->
+          <!-- question 3 -->
+          <div class="q3">
+            <fieldset class="question3">
+              <h2>
+                Honorific?
+              </h2>
+              <p>
+                <label>Pick an honorific or type your own!</label>
+                <input type="text" list="honorific" />
+                <datalist id="honorific">
+                  <option value="Sir">Sir</option>
+                  <option value="Colonel">Colonel</option>
+                  <option value="Duke">Duke</option>
+                  <option value="Lady">Lady</option>
+                  <option value="Madam">Madam</option>
+                  <option value="Duchess">Duchess</option>
+                </datalist>
+              </p>
+              <div class="submitContainer">
+                <input type="submit" value="Results!" />
+              </div>
+            </fieldset>
+          </div>
         </form>
         <div class="result">
           <h3 class="results"></h3>
@@ -175,7 +168,15 @@
     </main>
 
     <footer>
-      <div class="wrapper">Copyright Sierra MacDonald - Created at Juno</div>
+      <div class="restartContainer">
+        <input
+          class="refresh"
+          type="submit"
+          value="Try again!"
+          onclick="refreshPage()"
+        />
+      </div>
+      <p>Copyright Sierra MacDonald - Created at Juno College</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="script.js"></script>

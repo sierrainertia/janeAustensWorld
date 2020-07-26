@@ -7,24 +7,48 @@ main {
   }
 
   .q1,
-  .q2 {
+  .q2,
+  .q3 {
     @include questionBox;
     display: flex;
     justify-content: center;
   }
 
-  .q2 {
-    margin-top: 50px;
-
+  .q1 {
     .option {
-      text-align: center;
+      padding: 20px 0 0 50px;
     }
   }
 
-  .option {
-    padding: 20px 0 0 50px;
-    display: inline;
+  .q2 {
+    margin-top: 50px;
+    position: relative;
+  }
 
+  .q3 {
+    margin-top: 50px;
+  }
+
+  .optionContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .option {
+    display: inline;
+    text-align: center;
+
+    label {
+      background-color: $darkGrey;
+      color: white;
+      padding: 10px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      //   transistion colour change for option background
+      transition: background-color 0.1s;
+      cursor: pointer;
+    }
+    // when "checked" change colour
     input:checked + label {
       background-color: #d3c0cd;
       color: $darkGrey;
@@ -32,31 +56,50 @@ main {
     }
   }
 
-  .option label {
-    background-color: $darkGrey;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  .q2 {
-    position: relative;
-  }
-
   .image2 {
     position: absolute;
-    left: 60px;
-    bottom: 45px;
+    left: 65px;
+    bottom: 100px;
+  }
+
+  //   submit
+  .submitContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    @include submit;
+
+    input:hover {
+      background-color: $purple;
+    }
+  }
+
+  // Question 3
+  option:hover {
+    background-color: $purple;
+    color: $darkGrey;
+  }
+
+  .q3 {
+    p {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   //   results box
   .result {
     margin-top: 50px;
+    margin-bottom: 50px;
     background-color: $purple;
 
     h3 {
       font-size: 100px;
       text-align: center;
+
+      &:empty {
+        display: none;
+      }
     }
   }
 }

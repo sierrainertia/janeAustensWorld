@@ -336,6 +336,7 @@ textarea {
           clip-path: inset(100%);
   clip: rect(0 0 0);
   overflow: hidden;
+  left: -5000px;
 }
 
 html {
@@ -370,13 +371,30 @@ h2 {
   font-size: 55px;
 }
 
+h2:after {
+  content: "";
+  background-position: center;
+}
+
+@media (min-width: 550px) {
+  h2:after {
+    background-image: url("assets/fancy.svg");
+    height: 40px;
+    width: 300px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+}
+
 h3 {
   letter-spacing: 4px;
 }
 
 h1 {
   font-size: 85px;
-  text-align: left;
+  text-align: center;
   padding: 50px;
   line-height: 1;
 }
@@ -389,6 +407,23 @@ header .wrapper {
   background-color: rgba(211, 192, 205, 0.7);
 }
 
+h1::after {
+  content: "";
+  background-position: left;
+}
+
+@media (min-width: 550px) {
+  h1::after {
+    background-image: url("assets/fancy.svg");
+    height: 40px;
+    width: 300px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+}
+
 .intro {
   position: relative;
 }
@@ -399,12 +434,6 @@ header .wrapper {
   display: -ms-flexbox;
   display: flex;
   width: 80%;
-}
-
-.image {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  height: 80%;
 }
 
 .image img {
@@ -428,7 +457,8 @@ main h2 {
 }
 
 main .q1,
-main .q2 {
+main .q2,
+main .q3 {
   background-color: rgba(211, 211, 211, 0.7);
   padding: 0 50px 50px 50px;
   display: -webkit-box;
@@ -439,17 +469,42 @@ main .q2 {
           justify-content: center;
 }
 
+main .q1 .option {
+  padding: 20px 0 0 50px;
+}
+
 main .q2 {
+  margin-top: 50px;
+  position: relative;
+}
+
+main .q3 {
   margin-top: 50px;
 }
 
-main .q2 .option {
-  text-align: center;
+main .optionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main .option {
-  padding: 20px 0 0 50px;
   display: inline;
+  text-align: center;
+}
+
+main .option label {
+  background-color: #333333;
+  color: white;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  cursor: pointer;
 }
 
 main .option input:checked + label {
@@ -458,29 +513,189 @@ main .option input:checked + label {
   border: 2px solid #333333;
 }
 
-main .option label {
-  background-color: #333333;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-main .q2 {
-  position: relative;
-}
-
 main .image2 {
   position: absolute;
-  left: 60px;
-  bottom: 45px;
+  left: 65px;
+  bottom: 100px;
+}
+
+main .submitContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 75px;
+}
+
+main .submitContainer input {
+  border-radius: 5px;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  padding: 10px 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+main .submitContainer input:hover {
+  color: #333333;
+  border: 2px solid #333333;
+}
+
+main .submitContainer input:hover {
+  background-color: rgba(211, 192, 205, 0.7);
+}
+
+main option:hover {
+  background-color: rgba(211, 192, 205, 0.7);
+  color: #333333;
+}
+
+main .q3 p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main .result {
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: rgba(211, 192, 205, 0.7);
 }
 
 main .result h3 {
   font-size: 100px;
   text-align: center;
+}
+
+main .result h3:empty {
+  display: none;
+}
+
+footer {
+  background-color: rgba(211, 192, 205, 0.7);
+  text-align: center;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+footer .restartContainer {
+  padding: 20px;
+}
+
+footer .restartContainer input {
+  border-radius: 5px;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  padding: 10px 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+footer .restartContainer input:hover {
+  color: #333333;
+  border: 2px solid #333333;
+}
+
+footer .restartContainer input:hover {
+  background-color: rgba(211, 211, 211, 0.7);
+}
+
+@media (max-width: 950px) {
+  body {
+    font-size: 20px;
+  }
+  header .description {
+    max-width: 80%;
+  }
+  header .info {
+    width: 100%;
+  }
+  main .optionContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .q1 .option,
+  main .q2 .option,
+  main .q3 .option {
+    padding: 20px 0 0 0px;
+  }
+  main .image2 {
+    left: 40px;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  header .info {
+    padding: 20px;
+  }
+  header .image img {
+    max-height: 50%;
+  }
+  main h1,
+  main h2,
+  main h3 {
+    line-height: 1;
+    padding: 35px;
+  }
+  main h1 {
+    font-size: 50px;
+  }
+  main h2 {
+    font-size: 45px;
+  }
+  main h3 {
+    font-size: 40px;
+  }
+  main .q1,
+  main .q2,
+  main .q3 {
+    padding: unset;
+  }
+  main .optionContainer {
+    padding-bottom: 50px;
+  }
+  main .submitContainer {
+    margin-top: 45px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  header .image img {
+    display: none;
+  }
+  header .info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: unset;
+  }
+  main .image img,
+  main .image2 img {
+    display: none;
+  }
+  main .q3 p {
+    text-align: center;
+  }
+  main .q3 input {
+    width: 60%;
+    margin: 0 auto;
+  }
+  main footer p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
