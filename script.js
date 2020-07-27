@@ -62,6 +62,7 @@ myApp.lastNamesByChoice = {
 
 myApp.init = function () {
   myApp.eventListener();
+  myApp.refresh();
 };
 
 myApp.getName = function (list) {
@@ -74,8 +75,8 @@ myApp.eventListener = function () {
     event.preventDefault();
 
     // collect honorific selected
-    // Const honorificSelectedDD = $(select[id=honorific]).val();
-
+    const honorificSelectedDD = $("input[list=honorific").val();
+    console.log(honorificSelectedDD);
     // get which book they selected
     const fnSelectedRadioButton = $("input[name=novel]:checked");
     const book = fnSelectedRadioButton.val();
@@ -99,10 +100,23 @@ myApp.eventListener = function () {
 
     // return to user random first name + tea/old english word when randomize button is clicked
 
-    $(".results").html(`${chosenFirstName} ${chosenLastName}`);
+    $(".results").html(
+      `${honorificSelectedDD} ${chosenFirstName} ${chosenLastName}`
+    );
   });
 };
 
+// reset page when user clicks try again
+myApp.refresh = function () {
+  $("#refresh").click(function () {
+    // got help from https://stackoverflow.com/questions/32178646/uncheck-radio-button-on-click-using-jquery
+    $("input[name=novel]:checked").prop("checked", false);
+    $("input[name=lastname]:checked").prop("checked", false);
+    $("input[list=honorific").val("");
+    // reload to top of screen
+    window.scrollTo(0, 0);
+  });
+};
 // Define functions like
 // myApp.doSomething = function() {}
 

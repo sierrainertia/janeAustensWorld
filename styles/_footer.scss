@@ -10,7 +10,7 @@ footer {
     padding: 20px;
     @include submit;
 
-    input:hover {
+    button:hover {
       background-color: $lightGrey;
     }
   }
