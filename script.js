@@ -117,8 +117,6 @@ myApp.refresh = function () {
     window.scrollTo(0, 0);
   });
 };
-// Define functions like
-// myApp.doSomething = function() {}
 
 $(function () {
   myApp.init();
