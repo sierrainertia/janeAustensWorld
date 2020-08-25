@@ -369,6 +369,8 @@ h3 {
 
 h2 {
   font-size: 55px;
+  padding: 50px;
+  text-align: center;
 }
 
 h2:after {
@@ -451,14 +453,15 @@ main {
   margin-top: 50px;
 }
 
-main h2 {
-  padding: 50px;
-  text-align: center;
+.image2 {
+  position: absolute;
+  left: 65px;
+  bottom: 100px;
 }
 
-main .q1,
-main .q2,
-main .q3 {
+.q1,
+.q2,
+.q3 {
   background-color: rgba(211, 211, 211, 0.7);
   padding: 0 50px 50px 50px;
   display: -webkit-box;
@@ -469,93 +472,16 @@ main .q3 {
           justify-content: center;
 }
 
-main .q1 .option {
-  padding: 20px 0 0 50px;
-}
-
-main .q2 {
+.q2 {
   margin-top: 50px;
   position: relative;
 }
 
-main .q3 {
+.q3 {
   margin-top: 50px;
 }
 
-main .optionContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-main .option {
-  display: inline;
-  text-align: center;
-}
-
-main .option label {
-  background-color: #333333;
-  color: white;
-  padding: 10px;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  -webkit-transition: background-color 0.1s;
-  transition: background-color 0.1s;
-  cursor: pointer;
-}
-
-main .option input:checked + label {
-  background-color: #d3c0cd;
-  color: #333333;
-  border: 2px solid #333333;
-}
-
-main .image2 {
-  position: absolute;
-  left: 65px;
-  bottom: 100px;
-}
-
-main .submitContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 75px;
-}
-
-main .submitContainer input,
-main .submitContainer button {
-  border-radius: 5px;
-  -webkit-transition: background-color 0.1s;
-  transition: background-color 0.1s;
-  padding: 10px 50px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
-}
-
-main .submitContainer input:hover,
-main .submitContainer button:hover {
-  color: #333333;
-  border: 2px solid #333333;
-}
-
-main .submitContainer input:hover {
-  background-color: rgba(211, 192, 205, 0.7);
-}
-
-main option:hover {
-  background-color: rgba(211, 192, 205, 0.7);
-  color: #333333;
-}
-
-main .q3 p {
+.q3 p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,18 +492,92 @@ main .q3 p {
   text-align: center;
 }
 
-main .result {
+.optionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.optionContainer:focus-within {
+  border: 2px solid purple;
+}
+
+.option {
+  display: inline;
+  text-align: center;
+}
+
+.option label {
+  display: block;
+  background-color: #333333;
+  color: white;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+
+.option label:hover, .option label:focus-within {
+  background-color: rgba(211, 192, 205, 0.7);
+  color: #333333;
+  border: 2px solid #333333;
+}
+
+.option input:checked + label {
+  background-color: #d3c0cd;
+  color: #333333;
+  border: 2px solid #333333;
+}
+
+.submitContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 75px;
+}
+
+.submitContainer input,
+.submitContainer button {
+  border-radius: 5px;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  padding: 10px 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.submitContainer input:hover,
+.submitContainer button:hover {
+  color: #333333;
+  border: 2px solid #333333;
+}
+
+.submitContainer input:hover,
+.submitContainer input:focus {
+  background-color: rgba(211, 192, 205, 0.7);
+}
+
+.result {
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: rgba(211, 192, 205, 0.7);
 }
 
-main .result h3 {
+.result h3 {
   font-size: 100px;
   text-align: center;
 }
 
-main .result h3:empty {
+.result h3:empty {
   display: none;
 }
 
@@ -611,7 +611,8 @@ footer .restartContainer button:hover {
   border: 2px solid #333333;
 }
 
-footer .restartContainer button:hover {
+footer .restartContainer button:hover,
+footer .restartContainer button:focus {
   background-color: rgba(211, 211, 211, 0.7);
 }
 

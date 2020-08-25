@@ -1,106 +1,113 @@
+// General styles
 main {
   margin-top: 50px;
+}
 
-  h2 {
-    padding: 50px;
+.image2 {
+  position: absolute;
+  left: 65px;
+  bottom: 100px;
+}
+// ******************
+// Question styles
+// ******************
+.q1,
+.q2,
+.q3 {
+  @include questionBox;
+  display: flex;
+  justify-content: center;
+}
+
+.q2 {
+  margin-top: 50px;
+  position: relative;
+}
+
+.q3 {
+  margin-top: 50px;
+  p {
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
+}
 
-  .q1,
-  .q2,
-  .q3 {
-    @include questionBox;
-    display: flex;
-    justify-content: center;
+// ***********************
+// option (choices) styles
+// ***********************
+.optionContainer {
+  display: flex;
+  justify-content: space-evenly;
+
+  &:focus-within {
+    border: 2px solid purple;
   }
+}
 
-  .q1 {
-    .option {
-      padding: 20px 0 0 50px;
-    }
-  }
+.option {
+  display: inline;
+  text-align: center;
 
-  .q2 {
-    margin-top: 50px;
-    position: relative;
-  }
+  // input:focus ~ label {
+  //   border: 2px solid red;
+  // }
+  label {
+    display: block;
+    background-color: $darkGrey;
+    color: white;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    //   transistion colour change for option background
+    transition: background-color 0.1s;
+    cursor: pointer;
 
-  .q3 {
-    margin-top: 50px;
-  }
-
-  .optionContainer {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .option {
-    display: inline;
-    text-align: center;
-
-    label {
-      background-color: $darkGrey;
-      color: white;
-      padding: 10px;
-      border: 2px solid transparent;
-      border-radius: 5px;
-      //   transistion colour change for option background
-      transition: background-color 0.1s;
-      cursor: pointer;
-    }
-    // when "checked" change colour
-    input:checked + label {
-      background-color: #d3c0cd;
+    &:hover,
+    &:focus-within {
+      background-color: $purple;
       color: $darkGrey;
       border: 2px solid $darkGrey;
     }
   }
-
-  .image2 {
-    position: absolute;
-    left: 65px;
-    bottom: 100px;
-  }
-
-  //   submit
-  .submitContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 75px;
-    @include submit;
-
-    input:hover {
-      background-color: $purple;
-    }
-  }
-
-  // Question 3
-  option:hover {
-    background-color: $purple;
+  // when "checked" change colour
+  input:checked + label {
+    background-color: #d3c0cd;
     color: $darkGrey;
+    border: 2px solid $darkGrey;
   }
+}
 
-  .q3 {
-    p {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-  }
+// ****************
+//  submit Button
+// ****************
 
-  //   results box
-  .result {
-    margin-top: 50px;
-    margin-bottom: 50px;
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  @include submit;
+
+  input:hover,
+  input:focus {
     background-color: $purple;
+  }
+}
 
-    h3 {
-      font-size: 100px;
-      text-align: center;
+// ***************
+//   results box
+// ***************
+.result {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: $purple;
 
-      &:empty {
-        display: none;
-      }
+  h3 {
+    font-size: 100px;
+    text-align: center;
+
+    &:empty {
+      display: none;
     }
   }
 }

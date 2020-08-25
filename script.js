@@ -113,6 +113,7 @@ myApp.refresh = function () {
     $("input[name=novel]:checked").prop("checked", false);
     $("input[name=lastname]:checked").prop("checked", false);
     $("input[list=honorific").val("");
+    $(".results").html("");
     // reload to top of screen
     window.scrollTo(0, 0);
   });
